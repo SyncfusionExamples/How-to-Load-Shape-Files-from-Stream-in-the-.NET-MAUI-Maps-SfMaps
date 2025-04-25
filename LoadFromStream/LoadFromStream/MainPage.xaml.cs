@@ -10,9 +10,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         
         Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
-        var jsonStream = assembly?.GetManifestResourceStream("australia.json");
+        var jsonStream = assembly?.GetManifestResourceStream("LoadFromStream.australia.json");
         layer.ShapesSource = MapSource.FromStream(jsonStream);
-        //this.Layer = layer;
-        //this.Content = map;
     }
 }
